@@ -1,13 +1,13 @@
 const ShoppingListService = require("../src/shopping-list-service");
 const knex = require("knex");
 
-describe(`Shopping List service object`, function () {
+describe.only(`Shopping List service object`, function () {
   let db;
   let testItems = [
     {
       id: 1,
       name: "Eggs",
-      price: 1.0,
+      price: "1.00",
       category: "Breakfast",
       checked: true,
       date_added: new Date("2029-01-22T16:28:32.615Z"),
@@ -15,7 +15,7 @@ describe(`Shopping List service object`, function () {
     {
       id: 2,
       name: "Bread",
-      price: 2.0,
+      price: "2.00",
       category: "Main",
       checked: false,
       date_added: new Date("2100-05-22T16:28:32.615Z"),
@@ -23,7 +23,7 @@ describe(`Shopping List service object`, function () {
     {
       id: 3,
       name: "Ham",
-      price: 3.0,
+      price: "3.00",
       category: "Lunch",
       checked: false,
       date_added: new Date("1919-12-22T16:28:32.615Z"),
